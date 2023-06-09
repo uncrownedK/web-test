@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Tasty Food</title>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+	<script src="https://kit.fontawesome.com/bc52fcc731.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class = "container">
+		<div class="header">
+			<nav>
+				<input type = "checkbox" id = "show-menu">
+					<label for = "show-menu" class = "menu-icon"><i class = "fas fa-bars"></i></label>
+				<div class = "content">
+				<div class = "logo"><a href = "index.php">Tasty Food</a></div>
+				
+					<ul class="links">
+
+						<li><a href = "index.php">Home</a></li>
+						
+						<li><a href = "aboutus.php">About Us</a></li>
+						
+						<li>
+							<a href = "#" class="desktop-link">Recipe</a>
+							<input type = "checkbox" id = "show-recipe">
+							<label for = "show-recipe">Recipe</label>
+							
+							<ul>
+							<li><a href = "burger.php">Burger</a></li>
+							<li><a href = "#">Pizza</a></li>
+							<li><a href = "#">Chicken</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href = "contact.php" class="desktop-link">Contact Us</a>
+							<input type = "checkbox" id = "show-contact">
+							<label for = "show-contact">Contact Us</label>          
+						</li>
+					</ul>
+				</div>			
+			</nav>
+		</div>
+	</div>	
+
+	<section class="main swiper mySwiper">
+
+		<div class="wrapper swiper-wrapper">
+		
+			<div class="slide swiper-slide">
+				<img src="images/burger.jfif" alt="" class="image" />
+				<div class="image-data">
+					<span class="text">Enjoy the finest burger.</span>
+						<h2>
+							"The ultimate expression of culinary creativity,  <br/>
+							where the possibilities are endless and the satisfaction is guaranteed."
+						</h2>
+					<a href="burger.html" class="button">View Recipe</a>
+				</div>
+			</div>
+			
+			<div class="slide swiper-slide">
+				<img src="images/pizza.jfif" alt="" class="image" />
+				<div class="image-data">
+					<span class="text">Pizza is not a 'trend' it's a way of life.</span>
+						<h2>
+							"Pizza is a universal language that transcends borders and <br/>
+							brings people together in a delicious harmony."
+						</h2>
+					<a href="#" class="button">View Recipe</a>
+				</div>
+			</div>
+			
+			<div class="slide swiper-slide">
+				<img src="images/chicken.jfif" alt="" class="image" />
+				<div class="image-data">
+					<span class="text">It's difficult to find someone who doesn't love chicken.</span>
+						<h2>
+							"From farmyards to fine dining, the humble chicken has risen to culinary stardom,  <br/>
+							delivering a delectable experience with every bite."
+						</h2>
+					<a href="#" class="button">View Recipe</a>
+				</div>
+			</div>
+		</div>
+
+        <div class="swiper-pagination"></div>
+		
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="javascript/java.js"></script>
+
+</body>
+</html>
