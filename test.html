@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        let akongApp = document.getElementById('app')
+        let h1 = document.createElement('h1')
+        let span1 = document.createElement('span')
+        let span2 = document.createElement('span')
+        let span3 = document.createElement('span')
+
+        let centerContainer = document.createElement('center')
+
+        let div1 = document.createElement('div')
+        div1.style = 'margin-bottom:10px;'
+        let div2 = document.createElement('div')
+        div2.style = 'margin-bottom:10px;'
+        let div3 = document.createElement('div')
+        div3.style = 'margin-bottom:10px;'
+        let div4 = document.createElement('div')
+        div4.style = 'margin-bottom:10px;'
+        let div5 = document.createElement('div')
+        div5.style = 'margin-bottom:10px;'
+        let div6 = document.createElement('div')
+
+        span1.innerText = "firstname "
+        span2.innerText = 'middlename '
+        span3.innerText = 'lastname'
+
+        let inputField = document.createElement('input')
+        inputField.placeholder = 'firstname'
+        inputField.style = "text-align:center"
+
+        let inputField2 = document.createElement('input')
+        inputField2.placeholder = 'middlename'
+        inputField2.style = "text-align:center"
+
+        let inputField3 = document.createElement('input')
+        inputField3.placeholder = 'lastname'
+        inputField3.style = "text-align:center"
+
+        let emailField = document.createElement('input')
+        emailField.placeholder = 'email'
+        emailField.style = "text-align:center"
+
+        let passwordField = document.createElement('input')
+        passwordField.type = 'password'
+        passwordField.placeholder = 'password'
+        passwordField.style = "text-align:center"
+
+        let confirmPasswordField = document.createElement('input')
+        confirmPasswordField.type = 'password'
+        confirmPasswordField.placeholder = 'confirm password'
+        confirmPasswordField.style = "text-align:center"
+
+        inputField.addEventListener('input', function(event) {
+            span1.innerText = event.target.value + ' '
+        });
+
+        inputField2.addEventListener('input', (event) => {
+            span2.innerText = event.target.value + ' '
+        })
+
+        inputField3.addEventListener('input', (event) => {
+            span3.innerText = event.target.value + ' '
+        })
+
+        emailField.addEventListener('input', (event) => {
+            const email = event.target.value;
+            if (/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+                emailField.innerText = 'email (valid)'
+                emailField.style.color = 'green'
+            } else {
+                emailField.innerText = 'email (invalid)'
+                emailField.style.color = 'red'
+            }
+        })
+
+        passwordField.addEventListener('input', (event) => {
+            const password = event.target.value;
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            if (passwordPattern.test(password)) {
+                passwordField.innerText = 'password (valid)'
+                passwordField.style.color = 'green'
+            } else {
+                passwordField.innerText = 'password (invalid)'
+                passwordField.style.color = 'red'
+            }
+        })
+
+        confirmPasswordField.addEventListener('input', (event) =>{
+            const confirmPassword = event.target.value;
+            const password = passwordField.value;
+            if (confirmPassword === password) {
+                confirmPasswordField.innerText = 'password (match)'
+                confirmPasswordField.style.color = 'green'
+            } else {
+                confirmPasswordField.innerText = 'password (did not match)'
+                confirmPasswordField.style.color = 'red'
+            }
+        })
+
+        h1.append(span1)
+        h1.append(span2)
+        h1.append(span3)
+
+        div1.append(inputField)
+        div2.append(inputField2)
+        div3.append(inputField3)
+        div4.append(emailField)
+        div5.append(passwordField)
+        div6.append(confirmPasswordField)
+
+        centerContainer.append(h1)
+        centerContainer.append(div1)
+        centerContainer.append(div2)
+        centerContainer.append(div3)
+        centerContainer.append(div4)
+        centerContainer.append(div5)
+        centerContainer.append(div6)
+
+        akongApp.append(centerContainer)
+
+    </script>
+</body>
+</html>
